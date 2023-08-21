@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Tasbih</title>
+
+    <!-- Daisy Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Work Sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<!-- tailwind custom class -->
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    clifford: '#da373d',
+                }
+            }
+        }
+    }
+</script>
+
+<!-- css class -->
+<style>
+    .font-work-sans {
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    .gradient-color {
+        background-image: linear-gradient(to left, #4880f9, #58f160);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+</style>
+
+
+<body class="font-work-sans">
+    <!-- header section -->
+    <header class="container mx-auto">
+        <h1
+            class="text-8xl h-full font-bold text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 pb-5 text-center mt-24 mx-10">
+            Digital Tasbih</h1>
+    </header>
+
+
+    <!-- Main section -->
+    <main>
+        <section class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-24 mx-10">
+                <!-- Subhan Allah -->
+                <div>
+                    <div class="card bg-base-100 shadow-2xl py-10">
+                        <div class="card-body">
+                            <h2 class="text-4xl text-center font-bold">Subhan Allah</h2>
+
+                            <p id="subhanAllahDisplay" class="text-7xl text-center my-5">0</p>
+
+                            <div class="card-actions justify-center">
+                                <button id="subhanAllahIncrementBtn"
+                                    class="btn btn-accent text-white">INCREMENT</button>
+                                <button id="subhanAllahDecrementBtn" class="btn btn-error text-white">DECREMENT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alhamdhulilah -->
+                <div>
+                    <div class="card bg-base-100 shadow-2xl py-10">
+                        <div class="card-body">
+                            <h2 class="text-4xl text-center font-bold">Alhamdhulilah</h2>
+
+                            <p id="alhamdulilahDisplay" class="text-7xl text-center my-5">0</p>
+
+                            <div class="card-actions justify-center">
+                                <button id="alhamdulilahIncrementBtn"
+                                    class="btn btn-accent text-white">INCREMENT</button>
+                                <button id="alhamdulilahDecrementBtn"
+                                    class="btn btn-error text-white">DECREMENT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Allahuakber -->
+                <div>
+                    <div class="card bg-base-100 shadow-2xl py-10">
+                        <div class="card-body">
+                            <h2 class="text-4xl text-center font-bold">Allahuakbar</h2>
+
+                            <p id="allahuAkbarDisplay" class="text-7xl text-center my-5">0</p>
+
+                            <div class="card-actions justify-center">
+                                <button id="allahuAkbarIncrementBtn"
+                                    class="btn btn-accent text-white">INCREMENT</button>
+                                <button id="allahuAkbarDecrementBtn" class="btn btn-error text-white">DECREMENT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 flex justify-center mb-10">
+                <button id="resetBtn" class="btn btn-warning text-white">RESET ALL TASBIH</button>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- js link -->
+    <script src="java-script/digital-tahbih.js"></script>
+</body>
+
+</html>
